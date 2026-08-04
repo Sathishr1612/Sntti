@@ -171,11 +171,7 @@ a:hover {
   height: 76px;
   width: auto;
   max-width: 240px;
-  background: var(--white);
   padding: 8px 16px;
-  border-radius: 12px;
-  border: 1.5px solid var(--gold-color);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation Links & Gold Underline Hover */
@@ -1162,7 +1158,7 @@ a:hover {
 .courses-controls-wrapper {
   position: absolute;
   bottom: 0;
-  right: calc(var(--bs-gutter-x) / 2 + 110px);
+  right: calc(var(--bs-gutter-x) / 2 + 20px);
   /* Moved slightly left for better visual balance */
   border-top: none;
   width: auto;
