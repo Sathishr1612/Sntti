@@ -8,11 +8,10 @@
   <meta name="description"
     content="Sowmya Nursery Teacher Training Institute (SNTTI) - Government-certified 1-year Nursery Teacher Training Diploma available Online and Offline since 2016.">
 
-  <!-- Google Typography -->
+  <!-- Google Typography: Plus Jakarta Sans — Single Premium Educational Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Bootstrap 5 CSS -->
@@ -25,8 +24,10 @@
   <!-- Swiper.js 11 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Custom Stylesheet -->
+  <!-- Custom Stylesheets (3-file architecture) -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
@@ -77,10 +78,10 @@
               <i class="bi bi-youtube"></i>
             </a>
           </div>
-          <button type="button" class="btn btn-header-admission" data-bs-toggle="modal"
+          <!-- <button type="button" class="btn btn-header-admission" data-bs-toggle="modal"
             data-bs-target="#consultationModal">
             Admission Open
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -250,19 +251,18 @@
       <div class="carousel-inner">
         <!-- Slide 1: Teacher teaching students -->
         <div class="carousel-item active">
-          <img src="assets/images/sntti-new/sntti-hero.webp"
-            class="d-block w-100" alt="Master teacher instructing trainees at SNTTI" referrerpolicy="no-referrer">
+          <img src="assets/images/sntti-new/sntti-hero.webp" class="d-block w-100"
+            alt="Master teacher instructing trainees at SNTTI" referrerpolicy="no-referrer">
         </div>
         <!-- Slide 2: Children classroom activity -->
         <div class="carousel-item">
-          <img src="assets/images/sntti-new/training-institute-hero.webp"
-            class="d-block w-100" alt="Early childhood classroom training workshop" referrerpolicy="no-referrer">
+          <img src="assets/images/sntti-new/teachers-hero.webp" class="d-block w-100"
+            alt="Early childhood classroom training workshop" referrerpolicy="no-referrer">
         </div>
         <!-- Slide 3: Graduation / Happy students -->
         <div class="carousel-item">
-          <img src="assets/images/sntti-new/teacher-class-room.webp"
-            class="d-block w-100" alt="Certified Nursery Teachers celebrating graduation at SNTTI"
-            referrerpolicy="no-referrer">
+          <img src="assets/images/sntti-new/teacher-class-room.webp" class="d-block w-100"
+            alt="Certified Nursery Teachers celebrating graduation at SNTTI" referrerpolicy="no-referrer">
         </div>
       </div>
 
@@ -365,60 +365,23 @@
 
         <!-- LEFT COLUMN: Custom 4-Element Collage Grid -->
         <div class="col-lg-6 col-12 animate-on-scroll fade-up">
-          <div class="about-collage-grid">
-
-            <!-- Top Row: Arch Image (Left) + Circular Dashed Image (Right) -->
-            <div class="row g-3 g-md-4 align-items-end mb-3 mb-md-4">
-
-              <!-- Top-Left: Arch/Pill top image -->
-              <div class="col-6">
-                <div class="collage-card collage-arch-top shadow-sm">
-                  <img
-                    src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=600&auto=format&fit=crop"
-                    alt="SNTTI Campus Classroom" class="collage-img" loading="lazy">
-                </div>
-              </div>
-
-              <!-- Top-Right: Circular image with dashed accent ring -->
-              <div class="col-6 text-center">
-                <div class="collage-circle-wrapper mx-auto">
-                  <div class="collage-card collage-circle shadow-sm">
-                    <img
-                      src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop"
-                      alt="Practical Montessori Training" class="collage-img" loading="lazy">
-                  </div>
-                </div>
-              </div>
-
+          <div class="editorial-collage-grid">
+            <div class="collage-item img-main">
+              <img src="assets/images/sntti-new/about-founder.webp" alt="SNTTI Campus Classroom" class="collage-img"
+                loading="lazy">
             </div>
-
-            <!-- Bottom Row: Gold Badge Card (Left) + Arch Bottom Image (Right) -->
-            <div class="row g-3 g-md-4 align-items-start">
-
-              <!-- Bottom-Left: Gold Gradient Pill Badge Card -->
-              <div class="col-6">
-                <div class="collage-badge-card shadow-sm">
-                  <div class="badge-icon-circle">
-                    <i class="bi bi-lightbulb-fill"></i>
-                  </div>
-                  <div class="badge-text-block">
-                    <span class="badge-number">10+ Batches</span>
-                    <span class="badge-label">Of Quality Service</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom-Right: Arch/Pill bottom image -->
-              <div class="col-6">
-                <div class="collage-card collage-arch-bottom shadow-sm">
-                  <img
-                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop"
-                    alt="Students in Class" class="collage-img" loading="lazy">
-                </div>
-              </div>
-
+            <div class="collage-item img-sub-1">
+              <img src="assets/images/sntti-new/sowamya-nursery.webp" alt="Practical Montessori Training"
+                class="collage-img" loading="lazy">
             </div>
-
+            <div class="collage-item img-sub-2">
+              <img src="assets/images/sntti-new/teachers-hero.webp" alt="Early Childhood Classroom Training"
+                class="collage-img" loading="lazy">
+            </div>
+            <div class="collage-item img-sub-3">
+              <img src="assets/images/sntti-new/training-course.webp" alt="Students in Class" class="collage-img"
+                loading="lazy">
+            </div>
           </div>
         </div>
 
@@ -507,75 +470,7 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SECTION 2.5: TRUST & ACHIEVEMENTS (Moved from Hero)
-       ========================================================================== -->
-  <section id="trust-achievements" class="trust-achievements-section py-5 py-lg-6 position-relative"
-    style="background-image: url('images/test-2.png'); background-size: cover; background-position: center; background-attachment: fixed;">
-    <!-- Frosted warm ivory overlay to make text highly readable while keeping the premium texture -->
-    <div
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(251, 248, 245, 0.92); backdrop-filter: blur(12px); z-index: 1;">
-    </div>
 
-    <div class="container position-relative" style="z-index: 2;">
-      <div class="row g-4 justify-content-center">
-        <!-- Metric 1 -->
-        <div class="col-lg-3 col-sm-6 text-center px-4">
-          <div class="trust-metric-item">
-            <div class="mb-3" style="color: var(--gold-color); font-size: 2.4rem;"><i class="bi bi-calendar-check-fill"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));"></i></div>
-            <h3
-              style="font-family: var(--font-serif); font-size: 2.4rem; font-weight: 800; color: var(--primary-color); line-height: 1.1; margin-bottom: 6px;">
-              2016</h3>
-            <p
-              style="font-size: 0.88rem; font-weight: 800; color: rgba(90, 29, 22, 0.75); text-transform: uppercase; letter-spacing: 0.15em; margin: 0;">
-              Training Since</p>
-          </div>
-        </div>
-        <!-- Metric 2 -->
-        <div class="col-lg-3 col-sm-6 text-center px-4">
-          <div class="trust-metric-item">
-            <div class="mb-3" style="color: var(--gold-color); font-size: 2.4rem;"><i class="bi bi-award-fill"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-serif); font-size: 2.4rem; font-weight: 800; color: var(--primary-color); line-height: 1.1; margin-bottom: 6px;">
-              10+</h3>
-            <p
-              style="font-size: 0.88rem; font-weight: 800; color: rgba(90, 29, 22, 0.75); text-transform: uppercase; letter-spacing: 0.15em; margin: 0;">
-              Successful Batches</p>
-          </div>
-        </div>
-        <!-- Metric 3 -->
-        <div class="col-lg-3 col-sm-6 text-center px-4">
-          <div class="trust-metric-item">
-            <div class="mb-3" style="color: var(--gold-color); font-size: 2.4rem;"><i
-                class="bi bi-star-fill text-warning" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));"></i></div>
-            <h3
-              style="font-family: var(--font-serif); font-size: 2.4rem; font-weight: 800; color: var(--primary-color); line-height: 1.1; margin-bottom: 6px;">
-              4.9★</h3>
-            <p
-              style="font-size: 0.88rem; font-weight: 800; color: rgba(90, 29, 22, 0.75); text-transform: uppercase; letter-spacing: 0.15em; margin: 0;">
-              Google Reviews</p>
-          </div>
-        </div>
-        <!-- Metric 4 -->
-        <div class="col-lg-3 col-sm-6 text-center px-4">
-          <div class="trust-metric-item">
-            <div class="mb-3" style="color: var(--gold-color); font-size: 2.4rem;"><i class="bi bi-laptop-fill"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-serif); font-size: 1.7rem; font-weight: 800; color: var(--primary-color); line-height: 1.2; margin-bottom: 10px; margin-top: 8px;">
-              Online & Offline</h3>
-            <p
-              style="font-size: 0.88rem; font-weight: 800; color: rgba(90, 29, 22, 0.75); text-transform: uppercase; letter-spacing: 0.15em; margin: 0;">
-              Flexible Learning</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- ==========================================================================
        SECTION 3: OUR COURSES (Editorial Split Layout + Swiper.js Carousel)
        ========================================================================== -->
@@ -594,13 +489,13 @@
               <!-- Small Section Label -->
               <div class="courses-label-wrapper d-inline-flex align-items-center gap-2 mb-2">
                 <span class="courses-header-label">OUR COURSES</span>
-                <div class="courses-label-line"></div>
+                <!-- <div class="courses-label-line"></div> -->
               </div>
 
               <!-- Large Heading -->
               <h2 class="courses-editorial-title mb-3">
-                Four Programmes.<br>
-                One Goal — Confident, Capable Educators.
+                Four Programmes. One Goal.
+                Confident,Capable Educators
               </h2>
 
               <!-- Introduction Paragraph -->
@@ -617,27 +512,28 @@
                   <i class="bi bi-arrow-right courses-cta-arrow ms-2"></i>
                 </a>
               </div>
+              <!-- Bottom Slide Indicator & Navigation Controls -->
+              <div class="courses-controls-wrapper d-flex align-items-center gap-4 pt-4 mt-4">
+                <!-- Slide Counter (e.g. 01 / 02) -->
+                <div class="courses-slide-counter">
+                  <span id="coursesSlideCurrent" class="current-num">01</span>
+                  <span class="divider">/</span>
+                  <span id="coursesSlideTotal" class="total-num">02</span>
+                </div>
+
+                <!-- Circular Navigation Arrows -->
+                <div class="courses-nav-arrows d-flex gap-2">
+                  <button id="coursesPrevBtn" class="courses-nav-btn" aria-label="Previous Slide">
+                    <i class="bi bi-chevron-left"></i>
+                  </button>
+                  <button id="coursesNextBtn" class="courses-nav-btn" aria-label="Next Slide">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <!-- Bottom Slide Indicator & Navigation Controls -->
-            <div class="courses-controls-wrapper d-flex align-items-center gap-4 pt-4 mt-4">
-              <!-- Slide Counter (e.g. 01 / 02) -->
-              <div class="courses-slide-counter">
-                <span id="coursesSlideCurrent" class="current-num">01</span>
-                <span class="divider">/</span>
-                <span id="coursesSlideTotal" class="total-num">02</span>
-              </div>
 
-              <!-- Circular Navigation Arrows -->
-              <div class="courses-nav-arrows d-flex gap-2">
-                <button id="coursesPrevBtn" class="courses-nav-btn" aria-label="Previous Slide">
-                  <i class="bi bi-chevron-left"></i>
-                </button>
-                <button id="coursesNextBtn" class="courses-nav-btn" aria-label="Next Slide">
-                  <i class="bi bi-chevron-right"></i>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -651,11 +547,10 @@
               <div class="swiper-slide h-auto">
                 <div class="course-showcase-card h-100">
                   <div class="card-image-box">
-                    <span class="card-floating-badge flagship">
+                    <!-- <span class="card-floating-badge flagship">
                       <i class="bi bi-star-fill text-warning me-1"></i> Flagship Programme
-                    </span>
-                    <img
-                      src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop"
+                    </span> -->
+                    <img src="assets/images/sntti-new/online-offline.webp"
                       alt="Teacher interacting with preschool children in a bright classroom" class="card-img"
                       loading="lazy">
                   </div>
@@ -688,11 +583,10 @@
               <div class="swiper-slide h-auto">
                 <div class="course-showcase-card h-100">
                   <div class="card-image-box">
-                    <span class="card-floating-badge">
+                    <!-- <span class="card-floating-badge">
                       <i class="bi bi-award-fill text-warning me-1"></i> Skill Module
-                    </span>
-                    <img
-                      src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop"
+                    </span> -->
+                    <img src="assets/images/sntti-new/teacher-training-workshop.webp"
                       alt="Teacher conducting an interactive workshop" class="card-img" loading="lazy">
                   </div>
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
@@ -724,11 +618,10 @@
               <div class="swiper-slide h-auto">
                 <div class="course-showcase-card h-100">
                   <div class="card-image-box">
-                    <span class="card-floating-badge">
+                    <!-- <span class="card-floating-badge">
                       <i class="bi bi-heart-pulse-fill text-warning me-1"></i> Wellness &amp; Family
-                    </span>
-                    <img
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                    </span> -->
+                    <img src="assets/images/sntti-new/nursery-teacher.webp"
                       alt="Professional counselling session with warm atmosphere" class="card-img" loading="lazy">
                   </div>
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
@@ -760,11 +653,10 @@
               <div class="swiper-slide h-auto">
                 <div class="course-showcase-card h-100">
                   <div class="card-image-box">
-                    <span class="card-floating-badge">
+                    <!-- <span class="card-floating-badge">
                       <i class="bi bi-briefcase-fill text-warning me-1"></i> Career Placement
-                    </span>
-                    <img
-                      src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?q=80&w=800&auto=format&fit=crop"
+                    </span> -->
+                    <img src="assets/images/sntti-new/our-students.webp"
                       alt="Career guidance and interview coaching session" class="card-img" loading="lazy">
                   </div>
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
@@ -804,8 +696,8 @@
   <!-- ==========================================================================
        SECTION 3B: WHY CHOOSE US (#why-us)
        ========================================================================== -->
-  <section id="why-us" class="why-choose-section position-relative overflow-hidden py-5 py-lg-6"
-    style="background-color: #2a0d0a;">
+
+  <section id="why-us" class="why-choose-section position-relative overflow-hidden">
 
     <!-- Deep Navy Ambient Glow & Curved Background Waves -->
     <div class="why-bg-wave-1" aria-hidden="true"></div>
@@ -845,8 +737,7 @@
 
             <!-- Benefit Card 1 -->
             <div class="col-12 col-lg-6 p-0 pe-lg-3 pb-lg-3">
-              <div
-                class="why-feature-card d-flex align-items-start gap-3 p-3 p-xl-4 bg-white rounded-4 shadow-sm w-100 h-100">
+              <div class="why-feature-card d-flex align-items-center gap-3 p-3 p-xl-4 bg-white shadow-sm w-100 h-100">
                 <div class="why-icon-box flex-shrink-0 d-flex align-items-center justify-content-center text-white">
                   <i class="bi bi-patch-check-fill"></i>
                 </div>
@@ -861,8 +752,7 @@
 
             <!-- Benefit Card 2 -->
             <div class="col-12 col-lg-6 p-0 ps-lg-3 pb-lg-3">
-              <div
-                class="why-feature-card d-flex align-items-start gap-3 p-3 p-xl-4 bg-white rounded-4 shadow-sm w-100 h-100">
+              <div class="why-feature-card d-flex align-items-center gap-3 p-3 p-xl-4 bg-white shadow-sm w-100 h-100">
                 <div class="why-icon-box flex-shrink-0 d-flex align-items-center justify-content-center text-white">
                   <i class="bi bi-wallet2"></i>
                 </div>
@@ -877,8 +767,7 @@
 
             <!-- Benefit Card 3 -->
             <div class="col-12 col-lg-6 p-0 pe-lg-3 pb-lg-3">
-              <div
-                class="why-feature-card d-flex align-items-start gap-3 p-3 p-xl-4 bg-white rounded-4 shadow-sm w-100 h-100">
+              <div class="why-feature-card d-flex align-items-center gap-3 p-3 p-xl-4 bg-white shadow-sm w-100 h-100">
                 <div class="why-icon-box flex-shrink-0 d-flex align-items-center justify-content-center text-white">
                   <i class="bi bi-briefcase-fill"></i>
                 </div>
@@ -893,8 +782,7 @@
 
             <!-- Benefit Card 4 -->
             <div class="col-12 col-lg-6 p-0 ps-lg-3 pb-lg-3">
-              <div
-                class="why-feature-card d-flex align-items-start gap-3 p-3 p-xl-4 bg-white rounded-4 shadow-sm w-100 h-100">
+              <div class="why-feature-card d-flex align-items-center gap-3 p-3 p-xl-4 bg-white  shadow-sm w-100 h-100">
                 <div class="why-icon-box flex-shrink-0 d-flex align-items-center justify-content-center text-white">
                   <i class="bi bi-laptop"></i>
                 </div>
@@ -907,37 +795,7 @@
               </div>
             </div>
 
-            <!-- Benefit Card 5 -->
-            <div class="col-12 col-lg-6 p-0 pe-lg-3 pb-lg-3">
-              <div
-                class="why-feature-card d-flex align-items-start gap-3 p-3 p-xl-4 bg-white rounded-4 shadow-sm w-100 h-100">
-                <div class="why-icon-box flex-shrink-0 d-flex align-items-center justify-content-center text-white">
-                  <i class="bi bi-person-badge-fill"></i>
-                </div>
-                <div>
-                  <h3 class="why-card-title mb-1">Expert Trainers</h3>
-                  <p class="why-card-text mb-0">
-                    Faculty with real experience in early childhood education and psychology.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Benefit Card 6 -->
-            <div class="col-12 col-lg-6 p-0 ps-lg-3 pb-lg-3">
-              <div
-                class="why-feature-card d-flex align-items-start gap-3 p-3 p-xl-4 bg-white rounded-4 shadow-sm w-100 h-100">
-                <div class="why-icon-box flex-shrink-0 d-flex align-items-center justify-content-center text-white">
-                  <i class="bi bi-building-fill-gear"></i>
-                </div>
-                <div>
-                  <h3 class="why-card-title mb-1">Excellent Infrastructure</h3>
-                  <p class="why-card-text mb-0">
-                    Well-equipped classrooms, teaching aids and materials, and a demonstration setup.
-                  </p>
-                </div>
-              </div>
-            </div>
 
           </div>
         </div>
@@ -948,8 +806,8 @@
           <div class="why-image-wrapper mx-auto">
             <div class="why-image-border-frame">
               <div class="why-image-inner">
-                <img src="assets/images/test-2.png" alt="Confident teacher training in modern early childhood classroom"
-                  class="why-img" loading="lazy">
+                <img src="assets/images/sntti-new/teachers-hero.webp"
+                  alt="Confident teacher training in modern early childhood classroom" class="why-img" loading="lazy">
               </div>
             </div>
           </div>
@@ -980,11 +838,14 @@
           The Course Ends.<br>
           Our Support <span class="gold">Doesn't.</span>
         </h2>
-        <p class="pl-subtext">
-          A diploma matters only if it takes you somewhere. SNTTI works with preschools,
-          play schools and daycare centres across Bangalore to connect graduating students
-          with opportunities while preparing them professionally before every interview.
-        </p>
+        <div>
+          <p class="pl-subtext mb-4">
+            A diploma matters only if it takes you somewhere. SNTTI works with preschools,
+            play schools and daycare centres across Bangalore to connect graduating students
+            with opportunities while preparing them professionally before every interview.
+          </p>
+          <a href="#contact" class="btn btn-gold-pill">Book Consultation <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
       </div>
 
       <!-- Thin divider -->
@@ -1047,11 +908,12 @@
         <!-- Image + Partners -->
         <div class="pl-right">
           <div class="pl-img-frame" id="plImgFrame">
-            <img src="images/why.png" alt="Teacher with young children in a classroom" loading="lazy" />
+            <img src="assets/images/sntti-new/interview-preparation.webp"
+              alt="Teacher with young children in a classroom" loading="lazy" />
             <div class="pl-scrim"></div>
 
             <!-- Frosted glass stat overlay -->
-            <div class="pl-stat" id="plStat">
+            <!-- <div class="pl-stat" id="plStat">
               <div class="pl-stat-icon">
                 <i class="bi bi-mortarboard-fill"></i>
               </div>
@@ -1063,7 +925,7 @@
                   Updated after every graduating batch
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <!-- Partner strip -->
@@ -1080,18 +942,375 @@
         </div>
 
       </div><!-- /pl-content -->
-
-      <!-- CTA -->
-      <div class="pl-cta-wrap">
-        <a href="#contact" class="pl-cta">
-          Book a Consultation
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-
     </div>
   </section>
 
+  <!-- ==========================================================================
+       SECTION 3.5: TESTIMONIALS
+       ========================================================================== -->
+  <section id="testimonials" class="testimonials-section py-6 overflow-hidden">
+    <div class="container-fluid px-lg-5">
+      <div class="row align-items-center g-5">
+        <!-- Left Column: Static Content -->
+        <div class="col-lg-4 z-2 position-relative">
+          <div class="testi-header-wrapper ps-lg-4">
+            <h2 class="testi-title mb-4 font-serif fw-bold">What Our Students Say</h2>
+            <div
+              class="testi-rating-badge mb-4 d-inline-flex align-items-center gap-2 p-3 rounded-pill bg-white shadow-sm border border-warning-subtle">
+              <span class="fs-4 text-warning fw-bold">4.9</span>
+              <div class="d-flex text-warning fs-5">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <span class="ms-2 small text-muted fw-medium border-start ps-3">120+ Google Reviews</span>
+            </div>
+            <p class="text-muted mb-5 pe-lg-4" style="font-size: 1.1rem;">
+              Join a community of confident, capable educators who have transformed their careers with our premium
+              training programs.
+            </p>
+            <a href="https://google.com" target="_blank" class="btn btn-hero-primary px-5 py-3 rounded-pill shadow">Read
+              More Reviews <i class="bi bi-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Column: Marquee Tracks -->
+        <div class="col-lg-8 position-relative">
+          <!-- Fade overlays for desktop edge smoothness -->
+          <div class="marquee-fade-left d-none d-lg-block"></div>
+          <div class="marquee-fade-right d-none d-lg-block"></div>
+
+          <!-- Top Row: Moves Left -->
+          <div class="marquee-container mb-4">
+            <div class="marquee-track marquee-left">
+              <!-- Original Set -->
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"Sowmya mam conducts the NTT classes in a very professional
+                  manner. She explains all concepts clearly and systematically. Her teaching methods are effective and
+                  easy to understand. She is supportive and always clarifies students' doubts."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Lakshmi M</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"This institute provides excellent training and well structured
+                  syllabus. Sowmya mam is very knowledgeable, patient and supportive. She not only taught the subject
+                  but also built confidence and passion for teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Saranya R</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"The institute not only gave me the knowledge and skills through
+                  the Nursery Teacher Training program, but also helped me discover my confidence, creativity, and
+                  passion for teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Raisa Golandaj</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"Sowmya Nursery Teacher Training Institution is an excellent
+                  place for NTT training. The course is well structured and truly helps in building confidence for early
+                  childhood teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Supreetha</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <!-- Duplicate Set for Seamless Loop -->
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"Sowmya mam conducts the NTT classes in a very professional
+                  manner. She explains all concepts clearly and systematically. Her teaching methods are effective and
+                  easy to understand. She is supportive and always clarifies students' doubts."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Lakshmi M</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"This institute provides excellent training and well structured
+                  syllabus. Sowmya mam is very knowledgeable, patient and supportive. She not only taught the subject
+                  but also built confidence and passion for teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Saranya R</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"The institute not only gave me the knowledge and skills through
+                  the Nursery Teacher Training program, but also helped me discover my confidence, creativity, and
+                  passion for teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Raisa Golandaj</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"Sowmya Nursery Teacher Training Institution is an excellent
+                  place for NTT training. The course is well structured and truly helps in building confidence for early
+                  childhood teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Supreetha</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Moves Right -->
+          <div class="marquee-container">
+            <div class="marquee-track marquee-right">
+              <!-- Original Set -->
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"I recently joined Nursery Teacher Training at SNTTI. It was the
+                  best decision I have ever made. The way she explains each topic with examples is realistic and
+                  inspiring."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Swetha Reddy</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"She allows us to express our views and always encourages us to
+                  improve our skills. The observation class gave us a real picture of classroom teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Pavai Kamalraj</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"Sowmya maam is a great mentor and gives excellent guidance. The
+                  way of teaching is very impressive. She is very supportive and always gives confidence and positive
+                  energy."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Vidya Patel</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <!-- Duplicate Set for Seamless Loop -->
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"I recently joined Nursery Teacher Training at SNTTI. It was the
+                  best decision I have ever made. The way she explains each topic with examples is realistic and
+                  inspiring."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Swetha Reddy</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"She allows us to express our views and always encourages us to
+                  improve our skills. The observation class gave us a real picture of classroom teaching."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Pavai Kamalraj</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="text-warning mb-3 fs-6"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testi-text font-serif italic">"Sowmya maam is a great mentor and gives excellent guidance. The
+                  way of teaching is very impressive. She is very supportive and always gives confidence and positive
+                  energy."</p>
+                <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div class="fw-bold text-dark">Vidya Patel</div>
+                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
+                    Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3.8: GET IN TOUCH (Premium Admissions Section)
+       ========================================================================== -->
+  <section id="contact-enquiry" class="premium-admissions-section">
+    <div class="container">
+
+      <!-- Premium Section Header -->
+      <div class="text-center mb-5 pb-3">
+        <h2 class="font-serif fw-bold mb-3 premium-section-title">Ready to Start Your Journey?</h2>
+        <p class="premium-section-desc mx-auto" style="max-width: 600px;">
+          Take the first step towards a rewarding career in early childhood education. Reach out to our advisors today.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-11 col-xl-10">
+
+          <!-- Unified Premium Card Layout -->
+          <div class="premium-admissions-card">
+            <div class="row g-0 align-items-stretch">
+
+              <!-- Left Side: Elegant Information Panel -->
+              <div class="col-lg-5 d-flex">
+                <div class="luxury-info-panel w-100">
+                  <h3 class="panel-title font-serif fw-bold">Admissions & Enquiries</h3>
+                  <p class="panel-desc">Speak directly with our senior advisors at the Bangalore campus to plan your
+                    teaching career.</p>
+
+                  <div class="info-list d-flex flex-column">
+                    <div class="info-item d-flex gap-3">
+                      <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                      <div>
+                        <h4 class="info-label">Bangalore Campus</h4>
+                        <p class="info-value mb-0">Shree Maatha Nilaya, No. 286, Krupanidhi College Road, Gunjur
+                          Village, Bengaluru – 560087</p>
+                      </div>
+                    </div>
+
+                    <div class="info-item d-flex gap-3">
+                      <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
+                      <div>
+                        <h4 class="info-label">Phone</h4>
+                        <a href="tel:+919916095796" class="info-value text-decoration-none">+91 99160 95796</a>
+                      </div>
+                    </div>
+
+                    <div class="info-item d-flex gap-3">
+                      <div class="info-icon"><i class="bi bi-whatsapp"></i></div>
+                      <div>
+                        <h4 class="info-label">WhatsApp</h4>
+                        <a href="https://wa.me/919916095796" target="_blank" rel="noopener"
+                          class="info-value text-decoration-none">+91 99160 95796</a>
+                      </div>
+                    </div>
+
+                    <div class="info-item d-flex gap-3">
+                      <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
+                      <div>
+                        <h4 class="info-label">Email</h4>
+                        <a href="mailto:info.sntti@gmail.com"
+                          class="info-value text-decoration-none">info.sntti@gmail.com</a>
+                      </div>
+                    </div>
+
+                    <div class="info-item d-flex gap-3">
+                      <div class="info-icon"><i class="bi bi-clock-fill"></i></div>
+                      <div>
+                        <h4 class="info-label">Working Hours</h4>
+                        <p class="info-value mb-0">Mon – Sun, 10:00 AM – 6:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Side: Luxury Enquiry Form -->
+              <div class="col-lg-7 d-flex">
+                <div class="luxury-form-card w-100">
+                  <h3 class="form-card-title font-serif fw-bold">Book Your Free Consultation</h3>
+                  <p class="form-card-desc">Tell us a little about yourself and we'll help you choose the right
+                    programme.</p>
+
+                  <div id="contactSuccessMessage" class="alert alert-success d-none mb-4" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i> <strong>Thank you.</strong><br>
+                    We have received your enquiry and will call you within one working day.
+                  </div>
+
+                  <form id="mainContactForm" class="luxury-contact-form">
+                    <div class="mb-4">
+                      <label for="enquiryName" class="form-label-luxury">Name</label>
+                      <input type="text" class="form-control-luxury-input" id="enquiryName"
+                        placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                      <div class="col-md-6">
+                        <label for="enquiryPhone" class="form-label-luxury">Phone</label>
+                        <input type="tel" class="form-control-luxury-input" id="enquiryPhone"
+                          placeholder="Enter phone number" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="enquiryEmail" class="form-label-luxury">Email</label>
+                        <input type="email" class="form-control-luxury-input" id="enquiryEmail"
+                          placeholder="Enter email address" required>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="enquiryCourse" class="form-label-luxury">Course</label>
+                      <div class="custom-select-wrapper">
+                        <select class="form-control-luxury-input select-styled" id="enquiryCourse" required>
+                          <option value="" disabled selected>Select a programme</option>
+                          <option value="ntt">Nursery Teacher Training (NTT)</option>
+                          <option value="workshop">Teacher Training Workshop</option>
+                          <option value="counselling">Counselling & Psychology</option>
+                          <option value="guidance">Career Guidance</option>
+                          <option value="other">Other</option>
+                        </select>
+                        <i class="bi bi-chevron-down select-icon-luxury"></i>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="enquiryMessage" class="form-label-luxury">Message</label>
+                      <textarea class="form-control-luxury-input" id="enquiryMessage" rows="3"
+                        placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-luxury-submit w-100 mb-2">
+                      Book My Free Consultation <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================================
        SECTION 4: FOOTER
@@ -1193,8 +1412,6 @@
           <a href="#privacy">Privacy Policy</a>
           <span>•</span>
           <a href="#terms">Terms of Service</a>
-          <span>•</span>
-          <span>Made with ❤ for Educators</span>
         </div>
       </div>
     </div>

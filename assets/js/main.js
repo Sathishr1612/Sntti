@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Sticky Navbar Scroll Shadow Effect
   const navbar = document.querySelector('.custom-navbar');
-  
+
   const handleScroll = () => {
     if (window.scrollY > 30) {
       navbar?.classList.add('scrolled');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function toggleMobileMenu() {
     const isOpen = mobileNavToggle?.classList.contains('active');
-    
+
     if (!isOpen) {
       mobileNavToggle?.classList.add('active');
       mobileMenuOverlay?.classList.add('active');
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (consultationForm) {
     consultationForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const submitBtn = consultationForm.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i> Request Submitted!`;
         }
-        
+
         if (formSuccessMessage) {
           formSuccessMessage.classList.remove('d-none');
         }
@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroCarouselEl) {
     const heroDots = document.querySelectorAll('#heroCarouselDots button');
     const heroSlideCurrent = document.getElementById('heroSlideCurrent');
-    
+
     heroCarouselEl.addEventListener('slide.bs.carousel', (e) => {
       const slideIndex = e.to;
-      
+
       // Update slide counter text (01, 02, 03)
       if (heroSlideCurrent) {
         heroSlideCurrent.textContent = String(slideIndex + 1).padStart(2, '0');
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCoursesCounter(swiper) {
       const currentEl = document.getElementById('coursesSlideCurrent');
       const totalEl = document.getElementById('coursesSlideTotal');
-      
+
       if (currentEl) {
         const currentPage = (swiper.snapIndex !== undefined ? swiper.snapIndex : swiper.activeIndex) + 1;
         currentEl.textContent = String(currentPage).padStart(2, '0');
@@ -241,10 +241,104 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Ensure swiper recalculates when section is animated into view
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       if (coursesSwiper && typeof coursesSwiper.update === 'function') {
         coursesSwiper.update();
       }
     }, { passive: true, once: true });
+  }
+
+  // 12. Testimonials Marquee via Swiper.js (Premium Smooth Scroll & Touch Drag)
+  const marqueeContainers = document.querySelectorAll('.marquee-container');
+  if (marqueeContainers.length > 0 && typeof Swiper !== 'undefined') {
+
+    const initTestiSwiper = (container, reverseDirection) => {
+      const swiper = new Swiper(container, {
+        wrapperClass: 'marquee-track',
+        slideClass: 'testi-card',
+        slidesPerView: 'auto',
+        loop: true,
+        speed: 6000, // Smooth continuous speed (ms per slide)
+        freeMode: true,
+        freeModeMomentum: false, // Prevents coasting after release for better control
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: reverseDirection
+        },
+        grabCursor: true,
+        allowTouchMove: true,
+      });
+
+      // Advanced Pause & Resume Logic for Touch and Hover
+      let interactionTimeout;
+
+      const pauseMarquee = () => {
+        if (swiper.autoplay.running) {
+          swiper.autoplay.stop();
+        }
+        clearTimeout(interactionTimeout);
+      };
+
+      const resumeMarquee = () => {
+        clearTimeout(interactionTimeout);
+        interactionTimeout = setTimeout(() => {
+          if (!swiper.autoplay.running) {
+            swiper.autoplay.start();
+          }
+        }, 2000); // Resume 2 seconds after release
+      };
+
+      // Desktop Hover Events
+      container.addEventListener('mouseenter', pauseMarquee);
+      container.addEventListener('mouseleave', resumeMarquee);
+
+      // Mobile / Touch Drag Events
+      swiper.on('touchStart', pauseMarquee);
+      swiper.on('sliderMove', pauseMarquee);
+      swiper.on('touchEnd', resumeMarquee);
+
+      return swiper;
+    };
+
+    // Top Row: Moves Left
+    if (marqueeContainers[0]) {
+      initTestiSwiper(marqueeContainers[0], false);
+    }
+
+    // Bottom Row: Moves Right
+    if (marqueeContainers[1]) {
+      initTestiSwiper(marqueeContainers[1], true);
+    }
+  }
+});
+
+// 13. Get in Touch Form Submission Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const mainContactForm = document.getElementById('mainContactForm');
+  const successMessage = document.getElementById('contactSuccessMessage');
+
+  if (mainContactForm && successMessage) {
+    mainContactForm.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent page reload
+      
+      // Hide the form with a smooth fade
+      mainContactForm.style.transition = 'opacity 0.3s ease';
+      mainContactForm.style.opacity = '0';
+      
+      setTimeout(() => {
+        mainContactForm.style.display = 'none';
+        
+        // Show success message
+        successMessage.classList.remove('d-none');
+        successMessage.style.opacity = '0';
+        successMessage.style.transition = 'opacity 0.5s ease';
+        
+        // Trigger reflow
+        void successMessage.offsetWidth;
+        
+        successMessage.style.opacity = '1';
+      }, 300);
+    });
   }
 });
