@@ -171,7 +171,7 @@ a:hover {
   height: 76px;
   width: auto;
   max-width: 240px;
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
 }
 
 /* Navigation Links & Gold Underline Hover */
@@ -2350,7 +2350,7 @@ a:hover {
 .testi-header-wrapper::before {
   content: 'STUDENT STORIES';
   display: block;
-  font-size: 0.72rem;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.22em;
   color: #D9A441;
@@ -2967,7 +2967,7 @@ a:hover {
 }
 
 .premium-section-title {
-  color: #1d1d1f;
+  color: var(--primary-color);
   letter-spacing: -1px;
   font-size: 2.8rem;
 }
@@ -3078,7 +3078,7 @@ a:hover {
 
 .luxury-form-card .form-card-title {
   font-size: 1.8rem;
-  color: #1d1d1f;
+  color: var(--primary-color);
   letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
 }
