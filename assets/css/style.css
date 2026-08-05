@@ -1302,33 +1302,10 @@ a:hover {
   transform: translateX(8px);
 }
 
-/* Layout overrides to move controls to bottom-right without HTML changes */
-.courses-editorial-section .row {
-  position: relative !important;
-  padding-bottom: 80px;
-  /* Space for the absolute controls */
-}
-
-.courses-left-col,
-.courses-left-content {
-  position: static !important;
-  /* Allow absolute wrapper to reference the row */
-}
-
-.courses-left-content {
-  padding-bottom: 60px;
-}
+/* Layout overrides for courses section */
 
 .courses-controls-wrapper {
-  position: absolute;
-  bottom: 0;
-  right: calc(var(--bs-gutter-x) / 2 + 20px);
-  /* Moved slightly left for better visual balance */
-  border-top: none;
-  width: auto;
-  max-width: none;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin-top: 30px !important;
   gap: 16px !important;
 }
 
