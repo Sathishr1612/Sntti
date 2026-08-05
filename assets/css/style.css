@@ -1118,13 +1118,13 @@ a:hover {
 }
 
 .about-quote-box {
-  background-color: #EBF6F0;
+  background-color:#6d2920;
   border-radius: 20px;
-  border: 1px solid rgba(162, 213, 188, 0.45);
+  border: 1px solid rgba(247, 235, 233, 0.45);
 }
 
 .quote-text {
-  color: #2D5843;
+  color: #ffffff;
   line-height: 1.6;
 }
 
