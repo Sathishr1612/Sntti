@@ -101,9 +101,9 @@ h2,
   line-height: 1.2 !important;
 }
 
-/* Courses Editorial Title: 46px for better column fit */
+/* Courses Editorial Title: Fluid sizing for better column fit */
 .courses-editorial-title {
-  font-size: 46px !important;
+  font-size: clamp(28px, 3.5vw, 46px) !important;
   font-weight: 800 !important;
   line-height: 1.15 !important;
 }
