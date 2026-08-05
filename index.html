@@ -12,7 +12,7 @@
   <link rel="icon" type="image/webp" href="assets/images/Logo-big.webp">
   <link rel="apple-touch-icon" href="assets/images/Logo-big.webp">
 
-  <!-- Google Typography: Plus Jakarta Sans — Single Premium Educational Font -->
+  <!-- Google Typography: Plus Jakarta Sans â€” Single Premium Educational Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
@@ -28,10 +28,11 @@
   <!-- Swiper.js 11 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Custom Stylesheets (3-file architecture) -->
+  <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/typography.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 
 <body>
@@ -45,7 +46,7 @@
     <div class="container">
       <div class="row align-items-center py-1">
         <!-- Left Contact Information -->
-        <div class="col-lg-5 col-md-6 col-12 d-flex align-items-center gap-3">
+        <div class="col-xl-5 col-lg-6 col-md-6 col-12 d-flex align-items-center gap-3">
           <span class="d-inline-flex align-items-center gap-1">
             <i class="bi bi-geo-alt-fill text-dark"></i> Bangalore
           </span>
@@ -60,21 +61,21 @@
         </div>
 
         <!-- Center Announcement -->
-        <div class="col-lg-4 d-none d-lg-block text-center">
-          <span class="center-announcement fw-bold small" style="font-size: 14px !important; letter-spacing: 1px !important;font-weight: 600 !important;
-">
-            <i class="bi bi-mortarboard-fill me-1 text-warning"></i> Admission Open for 2026–2027 Batch
+        <div class="col-xl-4 d-none d-xl-block text-center">
+          <span class="center-announcement fw-bold small"
+            style="font-size: 14px !important; letter-spacing: 1px !important;font-weight: 600 !important;">
+            <i class="bi bi-mortarboard-fill me-1 text-warning"></i> Admission Open for 2026â€“2027 Batch
           </span>
         </div>
 
         <!-- Right Social Links & Action -->
-        <div class="col-lg-3 col-md-6 col-12 text-end d-flex align-items-center justify-content-end gap-2">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 text-end d-flex align-items-center justify-content-end gap-2">
           <div class="d-inline-flex align-items-center gap-1 me-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+            <a href="https://www.facebook.com/NTTGunjur" target="_blank" rel="noopener noreferrer" class="social-icon-link"
               aria-label="Facebook">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+            <a href="https://www.instagram.com/sowmyanurseryteachertraining/" target="_blank" rel="noopener noreferrer" class="social-icon-link"
               aria-label="Instagram">
               <i class="bi bi-instagram"></i>
             </a>
@@ -93,7 +94,7 @@
   </header>
 
   <!-- Sticky Navbar -->
-  <nav id="navbar-main" class="navbar navbar-expand-lg custom-navbar sticky-top">
+  <nav id="navbar-main" class="navbar navbar-expand-xl custom-navbar sticky-top">
     <div class="container">
 
       <!-- Logo on Left -->
@@ -103,7 +104,7 @@
       </a>
 
       <!-- Mobile Hamburger Button -->
-      <button class="mobile-nav-toggle d-lg-none" type="button" id="mobileNavToggle" aria-label="Toggle navigation">
+      <button class="mobile-nav-toggle d-xl-none" type="button" id="mobileNavToggle" aria-label="Toggle navigation">
         <div class="hamburger-box">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -162,7 +163,7 @@
       </div>
 
       <!-- Book Consultation Button on Right -->
-      <div class="d-none d-lg-block btn-consultation-desktop">
+      <div class="d-none d-xl-block btn-consultation-desktop">
         <button type="button" class="btn btn-consultation" data-bs-toggle="modal" data-bs-target="#consultationModal"
           id="#contact">
           <i class="bi bi-calendar-check-fill"></i> Book Consultation
@@ -172,12 +173,13 @@
     </div>
   </nav>
 
-  <!-- Premium Full-Screen White Mobile Navigation Overlay -->
+  <!-- Premium Full-Screen Mobile Navigation Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <!-- Top Header inside Full-Screen Menu -->
+
+    <!-- Top Header -->
     <div class="mobile-menu-header d-flex align-items-center justify-content-between">
       <a href="#home" class="d-flex align-items-center gap-2" onclick="closeMobileMenu()">
-        <img src="/assets/sntti-logo.svg" alt="SNTTI Logo" class="mobile-menu-logo">
+        <img src="assets/images/footer-white-logo.webp" alt="SNTTI Logo" class="mobile-menu-logo">
       </a>
       <button type="button" class="mobile-close-btn" id="mobileCloseBtn" onclick="closeMobileMenu()"
         aria-label="Close menu">
@@ -185,55 +187,73 @@
       </button>
     </div>
 
-    <!-- Centered Nav Links -->
-    <div class="mobile-menu-nav text-center my-auto">
-      <a href="#home" class="mobile-nav-item active">Home</a>
-      <a href="#about" class="mobile-nav-item">About</a>
+    <!-- Nav Links -->
+    <div class="mobile-menu-nav" id="mobileMenuNav">
+      <a href="#home" class="mobile-nav-item active" onclick="closeMobileMenu()">
+        <i class="bi bi-house-fill me-3" style="color:#E9B13A; font-size:18px;"></i> Home
+      </a>
+      <a href="#about" class="mobile-nav-item" onclick="closeMobileMenu()">
+        <i class="bi bi-info-circle-fill me-3" style="color:#E9B13A; font-size:18px;"></i> About
+      </a>
 
       <div class="mobile-nav-dropdown">
-        <a href="#courses" class="mobile-nav-item d-inline-flex align-items-center gap-2" id="mobileCoursesToggle">
+        <a href="#courses" class="mobile-nav-item" id="mobileCoursesToggle" onclick="toggleMobileSubmenu(event)">
+          <i class="bi bi-book-fill me-3" style="color:#E9B13A; font-size:18px;"></i>
           <span>Courses</span>
-          <i class="bi bi-chevron-down accordion-icon fs-5"></i>
+          <i class="bi bi-chevron-down accordion-icon ms-auto"></i>
         </a>
         <div class="mobile-submenu" id="mobileSubmenu">
-          <a href="#ntt-course" class="mobile-submenu-item">
-            <i class="bi bi-journal-bookmark-fill text-warning"></i> Nursery Teacher Training
+          <a href="#ntt-course" class="mobile-submenu-item" onclick="closeMobileMenu()">
+            <i class="bi bi-journal-bookmark-fill"></i> Nursery Teacher Training
           </a>
-          <a href="#workshop" class="mobile-submenu-item">
-            <i class="bi bi-people-fill text-warning"></i> Teacher Training Workshop
+          <a href="#workshop" class="mobile-submenu-item" onclick="closeMobileMenu()">
+            <i class="bi bi-people-fill"></i> Teacher Training Workshop
           </a>
-          <a href="#counselling" class="mobile-submenu-item">
-            <i class="bi bi-heart-pulse-fill text-warning"></i> Counselling
+          <a href="#counselling" class="mobile-submenu-item" onclick="closeMobileMenu()">
+            <i class="bi bi-heart-pulse-fill"></i> Counselling
           </a>
-          <a href="#career" class="mobile-submenu-item">
-            <i class="bi bi-compass-fill text-warning"></i> Career Guidance
+          <a href="#career" class="mobile-submenu-item" onclick="closeMobileMenu()">
+            <i class="bi bi-compass-fill"></i> Career Guidance
           </a>
         </div>
       </div>
 
-      <a href="#admissions" class="mobile-nav-item">Admissions</a>
-      <a href="#resources" class="mobile-nav-item">Resources</a>
-      <a href="#contact-enquiry" class="mobile-nav-item">Contact</a>
+      <a href="#admissions" class="mobile-nav-item" onclick="closeMobileMenu()">
+        <i class="bi bi-mortarboard-fill me-3" style="color:#E9B13A; font-size:18px;"></i> Admissions
+      </a>
+      <a href="#resources" class="mobile-nav-item" onclick="closeMobileMenu()">
+        <i class="bi bi-folder-fill me-3" style="color:#E9B13A; font-size:18px;"></i> Resources
+      </a>
+      <a href="#contact-enquiry" class="mobile-nav-item" onclick="closeMobileMenu()">
+        <i class="bi bi-envelope-fill me-3" style="color:#E9B13A; font-size:18px;"></i> Contact
+      </a>
     </div>
 
     <!-- Mobile Footer Action -->
-    <div id="#contact-enquiry" class="mobile-menu-footer text-center mt-auto">
-      <button type="button" class="btn btn-consultation btn-mobile-consultation w-100 justify-content-center py-3"
+    <div class="mobile-menu-footer">
+      <button type="button" class="btn btn-consultation btn-mobile-consultation w-100 justify-content-center"
         data-bs-toggle="modal" data-bs-target="#consultationModal" onclick="closeMobileMenu()">
-        <i class="bi bi-calendar-check-fill me-2"></i> Book Consultation
+        <i class="bi bi-calendar-check-fill me-2"></i> Book Free Consultation
       </button>
 
-      <div class="mobile-social-links justify-content-center mt-3">
-        <a href="https://www.facebook.com/NTTGunjur" target="_blank" rel="noopener noreferrer"
-          class="mobile-social-icon" aria-label="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/sowmyanurseryteachertraining/" target="_blank" rel="noopener noreferrer"
-          class="mobile-social-icon" aria-label="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
+      <div class="d-flex align-items-center justify-content-between mt-4">
+        <!-- <p class="mb-0"
+          style="font-size:12px; color:rgba(255,255,255,0.4); font-family:'Plus Jakarta Sans',sans-serif;">
+          Bangalore â€¢ Est. 2016
+        </p> -->
+        <div class="mobile-social-links">
+          <a href="https://www.facebook.com/NTTGunjur" target="_blank" rel="noopener noreferrer"
+            class="mobile-social-icon" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/sowmyanurseryteachertraining/" target="_blank" rel="noopener noreferrer"
+            class="mobile-social-icon" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
       </div>
     </div>
+
   </div>
 
 
@@ -506,7 +526,7 @@
                 yourself or your family, there is a programme here for you.
               </p>
 
-              <!-- View All Courses → Elegant Text CTA -->
+              <!-- View All Courses â†’ Elegant Text CTA -->
               <div class="mb-4 mb-lg-0">
                 <a href="#consultationModal" class="courses-view-all-cta" data-bs-toggle="modal"
                   data-bs-target="#consultationModal">
@@ -534,12 +554,8 @@
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
-
-
         <!-- RIGHT SIDE (62% Desktop Width - Swiper Carousel) -->
         <div class="col-lg-7 col-xl-8 animate-on-scroll fade-up courses-right-col" style="min-width: 0;">
           <div class="swiper courses-swiper">
@@ -559,7 +575,7 @@
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
                     <div>
                       <div class="card-category-label">
-                        <i class="bi bi-patch-check-fill text-warning me-1"></i> 1 Year • Government Certified
+                        <i class="bi bi-patch-check-fill text-warning me-1"></i> 1 Year â€¢ Government Certified
                       </div>
                       <h3 class="card-title">
                         Nursery Teacher Training (NTT) Diploma
@@ -594,12 +610,12 @@
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
                     <div>
                       <div class="card-category-label">
-                        <i class="bi bi-clock-fill text-warning me-1"></i> Short-Term • Weekend Batches
+                        <i class="bi bi-clock-fill text-warning me-1"></i> Short-Term â€¢ Weekend Batches
                       </div>
                       <h3 class="card-title">
                         Teacher Training Workshop
                       </h3>
-                      <div class="card-meta">4–8 Weeks • Practical Training</div>
+                      <div class="card-meta">4â€“8 Weeks â€¢ Practical Training</div>
                       <p class="card-desc">
                         Intensive skill enhancement modules focused on phonics, creative art integration, and modern
                         classroom methods.
@@ -629,12 +645,12 @@
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
                     <div>
                       <div class="card-category-label">
-                        <i class="bi bi-shield-lock-fill text-warning me-1"></i> 1-on-1 • Confidential
+                        <i class="bi bi-shield-lock-fill text-warning me-1"></i> 1-on-1 â€¢ Confidential
                       </div>
                       <h3 class="card-title">
                         Individual &amp; Marital Counselling
                       </h3>
-                      <div class="card-meta">Flexible Slots • Certified Experts</div>
+                      <div class="card-meta">Flexible Slots â€¢ Certified Experts</div>
                       <p class="card-desc">
                         Compassionate, highly confidential psychological guidance and family counseling led by certified
                         experts.
@@ -664,12 +680,12 @@
                   <div class="card-body-box d-flex flex-column justify-content-between p-3 p-xl-4">
                     <div>
                       <div class="card-category-label">
-                        <i class="bi bi-mortarboard-fill text-warning me-1"></i> Post-Graduation • Assistance
+                        <i class="bi bi-mortarboard-fill text-warning me-1"></i> Post-Graduation â€¢ Assistance
                       </div>
                       <h3 class="card-title">
                         Career Guidance &amp; Placement
                       </h3>
-                      <div class="card-meta">100% Support • Top Preschools</div>
+                      <div class="card-meta">100% Support â€¢ Top Preschools</div>
                       <p class="card-desc">
                         Dedicated resume polishing, mock interview coaching, and active placement connections across
                         leading preschools.
@@ -725,7 +741,7 @@
           <!-- Description Paragraph -->
           <p class="why-description mb-4 mb-lg-5">
             By building a genuine learning community rather than a lecture hall, we prepare teachers to hold their own
-            in any classroom. Our graduates carry a method — not just a certificate.
+            in any classroom. Our graduates carry a method â€” not just a certificate.
           </p>
 
           <!-- Mobile Image (Hidden on Desktop) -->
@@ -834,7 +850,7 @@
         <!-- <span class="pl-eyebrow-line"></span> -->
       </div>
 
-      <!-- ── TOP INTRO ROW: Heading LEFT / Para RIGHT ── -->
+      <!-- â”€â”€ TOP INTRO ROW: Heading LEFT / Para RIGHT â”€â”€ -->
       <div class="pl-intro">
         <h2 class="pl-heading">
           The Course Ends.<br>
@@ -854,7 +870,7 @@
       <!-- Thin divider -->
       <div class="pl-divider"></div>
 
-      <!-- ── MAIN CONTENT: Steps LEFT / Image RIGHT ── -->
+      <!-- â”€â”€ MAIN CONTENT: Steps LEFT / Image RIGHT â”€â”€ -->
       <div class="pl-content">
 
         <!-- Steps -->
@@ -997,9 +1013,21 @@
                   manner. She explains all concepts clearly and systematically. Her teaching methods are effective and
                   easy to understand. She is supportive and always clarifies students' doubts."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Lakshmi M</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Lakshmi M</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1009,9 +1037,21 @@
                   syllabus. Sowmya mam is very knowledgeable, patient and supportive. She not only taught the subject
                   but also built confidence and passion for teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Saranya R</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Saranya R</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1021,9 +1061,21 @@
                   the Nursery Teacher Training program, but also helped me discover my confidence, creativity, and
                   passion for teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Raisa Golandaj</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Raisa Golandaj</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1033,9 +1085,21 @@
                   place for NTT training. The course is well structured and truly helps in building confidence for early
                   childhood teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Supreetha</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Supreetha</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <!-- Duplicate Set for Seamless Loop -->
@@ -1046,9 +1110,21 @@
                   manner. She explains all concepts clearly and systematically. Her teaching methods are effective and
                   easy to understand. She is supportive and always clarifies students' doubts."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Lakshmi M</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Lakshmi M</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1058,9 +1134,21 @@
                   syllabus. Sowmya mam is very knowledgeable, patient and supportive. She not only taught the subject
                   but also built confidence and passion for teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Saranya R</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Saranya R</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1070,9 +1158,21 @@
                   the Nursery Teacher Training program, but also helped me discover my confidence, creativity, and
                   passion for teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Raisa Golandaj</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Raisa Golandaj</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1082,9 +1182,21 @@
                   place for NTT training. The course is well structured and truly helps in building confidence for early
                   childhood teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Supreetha</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Supreetha</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
             </div>
@@ -1101,9 +1213,21 @@
                   best decision I have ever made. The way she explains each topic with examples is realistic and
                   inspiring."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Swetha Reddy</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Swetha Reddy</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1112,9 +1236,21 @@
                 <p class="testi-text font-serif italic">"She allows us to express our views and always encourages us to
                   improve our skills. The observation class gave us a real picture of classroom teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Pavai Kamalraj</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Pavai Kamalraj</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1124,9 +1260,21 @@
                   way of teaching is very impressive. She is very supportive and always gives confidence and positive
                   energy."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Vidya Patel</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Vidya Patel</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <!-- Duplicate Set for Seamless Loop -->
@@ -1137,9 +1285,21 @@
                   best decision I have ever made. The way she explains each topic with examples is realistic and
                   inspiring."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Swetha Reddy</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Swetha Reddy</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1148,9 +1308,21 @@
                 <p class="testi-text font-serif italic">"She allows us to express our views and always encourages us to
                   improve our skills. The observation class gave us a real picture of classroom teaching."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Pavai Kamalraj</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Pavai Kamalraj</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
               <div class="testi-card">
@@ -1160,9 +1332,21 @@
                   way of teaching is very impressive. She is very supportive and always gives confidence and positive
                   energy."</p>
                 <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
-                  <div class="fw-bold text-dark">Vidya Patel</div>
-                  <div class="testi-badge small text-muted"><i class="bi bi-google text-primary"></i> Verified Google
-                    Review</div>
+                  <div class="fw-semibold text-dark">Vidya Patel</div>
+                  <div class="testi-badge d-flex align-items-center gap-2"><svg class="google-logo" width="16" height="16"
+                      viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                      <path fill="none" d="M0 0h48v48H0z" />
+                    </svg>
+                    <span>Verified Google Review</span></div>
                 </div>
               </div>
             </div>
@@ -1206,7 +1390,7 @@
                       <div>
                         <h4 class="info-label">Bangalore Campus</h4>
                         <p class="info-value mb-0">Shree Maatha Nilaya, No. 286, Krupanidhi College Road, Gunjur
-                          Village, Bengaluru – 560087</p>
+                          Village, Bengaluru â€“ 560087</p>
                       </div>
                     </div>
 
@@ -1240,7 +1424,7 @@
                       <div class="info-icon"><i class="bi bi-clock-fill"></i></div>
                       <div>
                         <h4 class="info-label">Working Hours</h4>
-                        <p class="info-value mb-0">Mon – Sun, 10:00 AM – 6:00 PM</p>
+                        <p class="info-value mb-0">Mon â€“ Sun, 10:00 AM â€“ 6:00 PM</p>
                       </div>
                     </div>
                   </div>
@@ -1406,11 +1590,11 @@
       <!-- Bottom Strip -->
       <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         <div>
-          © 2026 Sowmya Nursery Teacher Training Institute (SNTTI). All Rights Reserved.
+          Â© 2026 Sowmya Nursery Teacher Training Institute (SNTTI). All Rights Reserved.
         </div>
         <div class="d-flex gap-3">
           <a href="#privacy">Privacy Policy</a>
-          <span>•</span>
+          <span>â€¢</span>
           <a href="#terms">Terms of Service</a>
         </div>
       </div>

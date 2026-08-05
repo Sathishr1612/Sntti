@@ -1,12 +1,3 @@
-/* ==========================================================================
-   SOWMYA NURSERY TEACHER TRAINING INSTITUTE (SNTTI)
-   style.css — Layout, Components, Colors, Utilities, Animations
-   (No media queries. No typography rules. See typography.css & responsive.css)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. CSS Custom Properties / Color Palette
-   -------------------------------------------------------------------------- */
 :root {
   --primary-color: #5A1D16;
   --secondary-color: #6B241A;
@@ -334,90 +325,227 @@ a:hover {
   background: var(--primary-color);
 }
 
+/* === PREMIUM FULLSCREEN MOBILE NAV — DEEP MAROON + GOLD ======================== */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #FFFFFF;
-  color: var(--text-dark);
+  background: linear-gradient(145deg, #1a0a08 0%, #2e100a 40%, #3d1610 70%, #1a0a08 100%);
+  color: #FFFFFF;
   z-index: 1080;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 24px 40px 24px;
+  padding: 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-100%);
-  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease,
+    visibility 0s linear 0.5s;
+  overflow: hidden;
+}
+
+/* Decorative gold diagonal line top-right */
+.mobile-menu-overlay::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233, 177, 58, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Decorative glow bottom-left */
+.mobile-menu-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233, 177, 58, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .mobile-menu-overlay.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease,
+    visibility 0s linear 0s;
 }
 
+/* --- Header Bar --- */
 .mobile-menu-header {
-  border-bottom: 1px solid var(--border-light);
-  padding-bottom: 16px;
+  padding: 22px 28px 20px 28px;
+  border-bottom: 1px solid rgba(233, 177, 58, 0.18);
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
 }
 
 .mobile-menu-logo {
-  height: 52px;
+  height: 48px;
   width: auto;
+  filter: brightness(1.1);
 }
 
 .mobile-close-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--light-bg);
-  border: 1px solid var(--border-light);
-  color: var(--primary-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(233, 177, 58, 0.12);
+  border: 1.5px solid rgba(233, 177, 58, 0.35);
+  color: #E9B13A;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: var(--transition-fast);
+  font-size: 18px;
+  transition: all 0.25s ease;
 }
 
 .mobile-close-btn:hover {
-  background: var(--primary-color);
-  color: var(--gold-color);
+  background: #E9B13A;
+  color: #2e100a;
+  border-color: #E9B13A;
+  transform: rotate(90deg);
 }
 
+/* --- Scrollable Nav Area --- */
 .mobile-menu-nav {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  padding: 20px 0;
+  gap: 4px;
+  padding: 28px 24px 20px 24px;
+  flex: 1;
+  overflow-y: auto;
+  align-items: stretch;
+  text-align: left;
 }
 
+/* Animated stagger on open */
+.mobile-menu-overlay.active .mobile-nav-item,
+.mobile-menu-overlay.active .mobile-nav-dropdown {
+  animation: slideInNav 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.mobile-menu-overlay.active .mobile-nav-item:nth-child(1) {
+  animation-delay: 0.07s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-item:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-dropdown {
+  animation-delay: 0.17s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-item:nth-child(4) {
+  animation-delay: 0.22s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-item:nth-child(5) {
+  animation-delay: 0.27s;
+}
+
+.mobile-menu-overlay.active .mobile-nav-item:nth-child(6) {
+  animation-delay: 0.32s;
+}
+
+@keyframes slideInNav {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Individual Nav Link */
 .mobile-nav-item {
-  font-family: var(--font-serif);
-  color: var(--primary-color);
-  display: inline-block;
-  transition: var(--transition-fast);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
+  position: relative;
+  border: 1.5px solid transparent;
+}
+
+.mobile-nav-item::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  width: 0;
+  height: 2px;
+  bottom: 10px;
+  background: #E9B13A;
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .mobile-nav-item:hover,
 .mobile-nav-item.active {
-  color: var(--gold-color);
-  transform: scale(1.05);
+  color: #E9B13A;
+  background: rgba(233, 177, 58, 0.08);
+  border-color: rgba(233, 177, 58, 0.2);
+  transform: none;
+  padding-left: 24px;
+}
+
+/* --- Courses Dropdown --- */
+.mobile-nav-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+#mobileCoursesToggle {
+  justify-content: space-between;
+  border: 1.5px solid transparent;
+}
+
+#mobileCoursesToggle:hover {
+  color: #E9B13A;
+  background: rgba(233, 177, 58, 0.08);
+  border-color: rgba(233, 177, 58, 0.2);
+  padding-left: 24px;
+}
+
+.accordion-icon {
+  font-size: 14px !important;
+  transition: transform 0.3s ease;
+}
+
+#mobileCoursesToggle.open .accordion-icon {
+  transform: rotate(180deg);
 }
 
 .mobile-submenu {
   display: none;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 14px;
-  padding: 16px;
-  background: var(--light-bg);
+  gap: 4px;
+  margin-top: 6px;
+  padding: 12px;
+  background: rgba(233, 177, 58, 0.05);
   border-radius: 12px;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(233, 177, 58, 0.15);
 }
 
 .mobile-submenu.open {
@@ -425,49 +553,79 @@ a:hover {
 }
 
 .mobile-submenu-item {
-  font-family: var(--font-sans);
-  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 11px 16px;
+  border-radius: 8px;
+  transition: all 0.22s ease;
 }
 
 .mobile-submenu-item:hover {
-  color: var(--primary-color);
+  color: #E9B13A;
+  background: rgba(233, 177, 58, 0.08);
 }
 
+.mobile-submenu-item .text-warning {
+  color: #E9B13A !important;
+}
+
+/* --- Footer --- */
 .mobile-menu-footer {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-light);
+  padding: 20px 24px 32px 24px;
+  border-top: 1px solid rgba(233, 177, 58, 0.18);
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .btn-mobile-consultation {
   height: 54px;
+  border-radius: 14px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #E9B13A 0%, #d4952a 100%) !important;
+  color: #2e100a !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(233, 177, 58, 0.35);
+  transition: all 0.3s ease;
 }
 
+.btn-mobile-consultation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(233, 177, 58, 0.5);
+}
+
+/* Social Links */
 .mobile-social-links {
   display: flex;
-  gap: 16px;
+  gap: 12px;
 }
 
 .mobile-social-icon {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background: var(--light-bg);
-  border: 1px solid var(--border-light);
-  color: var(--primary-color);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(233, 177, 58, 0.25);
+  color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition-fast);
+  font-size: 17px;
+  transition: all 0.25s ease;
 }
 
 .mobile-social-icon:hover {
-  background: var(--primary-color);
-  color: var(--gold-color);
+  background: #E9B13A;
+  color: #2e100a;
+  border-color: #E9B13A;
+  transform: translateY(-3px);
 }
 
 /* --------------------------------------------------------------------------
@@ -1153,6 +1311,10 @@ a:hover {
 .courses-left-content {
   position: static !important;
   /* Allow absolute wrapper to reference the row */
+}
+
+.courses-left-content {
+  padding-bottom: 60px;
 }
 
 .courses-controls-wrapper {
@@ -2370,7 +2532,7 @@ a:hover {
 
 .testi-header-wrapper>p,
 .testi-header-wrapper .text-muted {
-  color: rgba(255, 255, 255, 0.70) !important;
+  color: rgba(255, 255, 255, 0.90) !important;
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -3180,4 +3342,21 @@ a:hover {
   .luxury-form-card {
     padding: 30px 20px;
   }
+}
+/* Testimonial Card Updates */
+.testi-badge {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6B7280;
+    white-space: nowrap;
+}
+
+.google-logo {
+    flex-shrink: 0;
+}
+
+.testi-card .fw-semibold {
+    font-size: 1.1rem;
+    font-weight: 600 !important;
+    color: #1A1A1A;
 }

@@ -43,6 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.closeMobileMenu = closeMobileMenu;
 
+  // Expose toggleMobileSubmenu globally (called from onclick in HTML)
+  window.toggleMobileSubmenu = function(e) {
+    e.preventDefault();
+    const mobileSubmenu = document.getElementById('mobileSubmenu');
+    const toggle = document.getElementById('mobileCoursesToggle');
+    if (mobileSubmenu) mobileSubmenu.classList.toggle('open');
+    if (toggle) toggle.classList.toggle('open');
+  };
+
   if (mobileNavToggle) {
     mobileNavToggle.addEventListener('click', toggleMobileMenu);
   }
@@ -52,21 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // 3. Mobile Accordion Toggle for Courses Submenu
+  // 3. Mobile Accordion Toggle for Courses Submenu (also handled via onclick in HTML)
   const mobileCoursesToggle = document.getElementById('mobileCoursesToggle');
   const mobileSubmenu = document.getElementById('mobileSubmenu');
-
-  if (mobileCoursesToggle && mobileSubmenu) {
-    mobileCoursesToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      mobileSubmenu.classList.toggle('open');
-      const icon = mobileCoursesToggle.querySelector('.accordion-icon');
-      if (icon) {
-        icon.style.transform = mobileSubmenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-        icon.style.transition = 'transform 0.3s ease';
-      }
-    });
-  }
+  // The onclick="toggleMobileSubmenu(event)" on the element handles the toggle.
 
   // 4. Consultation Form Submission Handler
   const consultationForm = document.getElementById('consultationForm');

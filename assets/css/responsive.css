@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    SNTTI RESPONSIVE CSS
    All @media queries consolidated from style.css
    Breakpoints: 1024px | 991.98px | 767.98px | 767px | 575.98px | 480px | 768px
@@ -97,7 +97,7 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 575.98px) {
   .courses-editorial-section {
-    padding-top: 80px;
+    padding-top: 65px;
     padding-bottom: 70px;
   }
 
@@ -772,5 +772,66 @@
   .contact-social-pill {
     width: 100%;
     justify-content: center;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   Small Desktop / Tablet Landscape (min-width: 992px and max-width: 1199.98px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-link {
+    padding: 8px 10px !important;
+    font-size: 14px !important;
+  }
+  .btn-consultation {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+  .top-header-bar { font-size: 13px; }
+  .center-announcement { font-size: 12px !important; }
+  .hero-title { font-size: 3rem !important; }
+  .about-main-title { font-size: 2.2rem !important; }
+  .editorial-collage-grid { gap: 15px; }
+  .courses-editorial-title { font-size: 2.2rem !important; }
+  .courses-left-col { padding-right: 15px !important; }
+  .course-showcase-card .card-title { font-size: 1.1rem !important; }
+  .card-body-box { padding: 1rem !important; }
+  .course-showcase-card { border-radius: 20px 50px 20px 20px; }
+  .card-image-box { border-radius: 20px 50px 0 0; }
+  .why-title { font-size: 2.2rem !important; }
+  .why-icon-box { width: 40px; height: 40px; }
+  .testi-title { font-size: 2.2rem !important; }
+  .testi-rating-badge {
+    padding: 10px 16px !important;
+    transform: scale(0.85);
+    transform-origin: left center;
+  }
+  .testi-card { width: 320px; padding: 24px; }
+}
+
+/* --------------------------------------------------------------------------
+   Placement Image Frame - Tablet (max-width: 991.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .pl-right {
+    position: static;
+    margin-top: 40px;
+  }
+  .pl-img-frame {
+    border-radius: 20px 60px 20px 60px;
+    aspect-ratio: 16/9;
+    max-height: 320px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Placement Image Frame - Mobile (max-width: 575.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  .pl-img-frame {
+    border-radius: 16px 40px 16px 40px;
+    aspect-ratio: 4/3;
+    max-height: 260px;
   }
 }
