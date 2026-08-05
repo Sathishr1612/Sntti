@@ -243,16 +243,18 @@ a:hover {
 .btn-consultation {
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 12px 28px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
   border-radius: 30px;
   border: 2px solid var(--primary-color);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 15px rgba(90, 29, 22, 0.2);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  cursor: pointer;
-  height: 48px;
 }
 
 .btn-consultation:hover {
@@ -2666,7 +2668,7 @@ a:hover {
     box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.3s ease;
   flex-shrink: 0;
-  cursor: default;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3343,20 +3345,21 @@ a:hover {
     padding: 30px 20px;
   }
 }
+
 /* Testimonial Card Updates */
 .testi-badge {
-    font-size: 14px;
-    font-weight: 500;
-    color: #6B7280;
-    white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6B7280;
+  white-space: nowrap;
 }
 
 .google-logo {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .testi-card .fw-semibold {
-    font-size: 1.1rem;
-    font-weight: 600 !important;
-    color: #1A1A1A;
+  font-size: 1.1rem;
+  font-weight: 600 !important;
+  color: #1A1A1A;
 }
