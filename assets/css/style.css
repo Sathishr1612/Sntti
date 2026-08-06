@@ -128,7 +128,7 @@ a:hover {
    -------------------------------------------------------------------------- */
 .custom-navbar {
   background-color: var(--white);
-  padding: 10px 0;
+  padding: 8px 0;
   transition: var(--transition-medium);
   border-bottom: 1px solid rgba(90, 29, 22, 0.06);
 }
@@ -145,9 +145,9 @@ a:hover {
 }
 
 .brand-logo-img {
-  height: 64px;
+  height: 72px;
   width: auto;
-  max-width: 200px;
+  max-width: 240px;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(90, 29, 22, 0.12));
   transition: var(--transition-fast);
@@ -159,9 +159,9 @@ a:hover {
 }
 
 .footer-logo-img {
-  height: 76px;
+  height: 140px;
   width: auto;
-  max-width: 240px;
+  max-width: 340px;
   /* padding: 8px 16px; */
 }
 
@@ -1118,7 +1118,7 @@ a:hover {
 }
 
 .about-quote-box {
-  background-color:#6d2920;
+  background-color: #6d2920;
   border-radius: 20px;
   border: 1px solid rgba(247, 235, 233, 0.45);
 }

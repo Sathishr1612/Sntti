@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    SNTTI RESPONSIVE CSS
    All @media queries consolidated from style.css
    Breakpoints: 1024px | 991.98px | 767.98px | 767px | 575.98px | 480px | 768px
@@ -416,10 +416,6 @@
     position: static;
   }
 
-  .pl-img-frame {
-    aspect-ratio: auto !important;
-  }
-
   .pl-cta-wrap {
     margin-top: 56px;
   }
@@ -440,11 +436,6 @@
 
   .pl-track {
     left: 20px;
-  }
-
-  .pl-img-frame {
-    border-radius: 0 !important;
-    aspect-ratio: auto !important;
   }
 
   .pl-stat {
